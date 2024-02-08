@@ -4,31 +4,16 @@ namespace Modul10.Final2
 {
     internal class Program
     {
-        ConsoleLogger log = new ConsoleLogger();
+        static ConsoleLogger log = new ConsoleLogger();
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("MiniCalc (addiction only)");
 
-        }
+            Calculator calc = new Calculator();
+            calc.Add();
 
-        private static int EnterNumber(string numName)
-        {
-            int number;
-            while (true)
-            {
-                try
-                {
-                    log.($"Type number {numName} and press Enter: ");
-                    number = int.Parse(Console.ReadLine());
-                    break;
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Incorrect input: " + e.ToString());
-                }
-            }
-            return number;
+            Console.WriteLine("That's all! Goodbye!!!");
         }
     }
 }
